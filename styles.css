@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic|Rock+Salt);
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+/* HEADING */
+
+.header-content {
+  height: 100%;
+}
+
+header {
+  height: 25vw;
+  max-height: 150px;
+  width: 100%;
+}
+
+.udacity-logo {
+  max-height: 100%;
+  width: 20%;
+  float: left;
+}
+
+h1 {
+  float: left;
+  padding-top: 5%;
+  width: 80%;
+  font-weight: normal;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 464px) and (min-width: 381px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 465px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .header-content {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .header-content {
+    padding-top: 5px;
+  }
+}
+
+
+/* MAIN SECTIONS */
+
+.hero {
+  padding: 1em;
+  max-width: 100%;
+  background-color: #CC1D6C;
+  color: white;
+  text-align: center;
+}
+
+.my-picture {
+  display: block;
+  margin: 0 auto 10px;
+  width: 250px;
+  max-width: 100%;
+  border: 2px solid white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.iama {
+  max-width: 100%;
+  color: #969696;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.my-info {
+  max-width: 100%;
+  font-size: 22px;
+  margin: 0 auto 20px;
+  padding: 10px 0;
+  border-bottom: 1px dotted #969696;
+}
+
+.hero .iama{
+  color: rgba(255,255,255, .5);
+}
+
+.hero .my-info{
+    font-family: 'Rock Salt', 'Lato', sans-serif;
+    border-bottom: none;
+    padding: 0;
+}
+
+.my-info:last-of-type {
+  margin: 0;
+}
+
+.my-name {
+  color: white;
+  border-bottom: 0;
+  font-family: 'Rock Salt', 'Lato', sans-serif;
+}
+
+.my-goal{
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+}
+
+.my-goal span{
+  overflow: visible;
+}
+
+.my-goal span:after{
+  content: '—';
+  display: block;
+  -webkit-transform: scale(6, 1);
+  transform: scale(6, 1);
+  position: absolute;
+  bottom: -15px;
+  right: 35px;
+}
+
+.my-goal span:last-of-type:after{
+  bottom: -20px;
+  -webkit-transform: scale(3, 1) rotate(-1deg);
+  transform: scale(3, 1) rotate(-4deg);
+}
+
+@keyframes mask {
+    0% {width: 110px;}
+    100% {width: 0px;}
+}
+
+.my-goal span:before{
+  content: '';
+  display: block;
+  background-color: #CC1D6C;
+  width: 110px;
+  height: 5px;
+  position: absolute;
+  right: -5px;
+  bottom: 7px;
+  z-index: 1;
+  animation-name: mask;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.my-goal span:last-of-type:before{
+  right: -5px;
+  bottom: 2px;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+.about-me {
+  padding: 1em;
+}
